@@ -40,7 +40,7 @@ def main():
     root.geometry("400x300")  # make the window more "notebook" style
 
     # === Main frame (inside root) ==========================================
-    mainframe = ttk.Frame(root, padding=10)
+    mainframe = ttk.Frame(root, padding=15)
     mainframe.grid(column=0, row=0, sticky="nsew")
 
     # === Frame that will hold all the checkbox tasks =======================
