@@ -5,6 +5,7 @@ import os
 
 
 def main():
+    print("test test test")
     # === Figure out where this script lives (for stable DB path) ===========
     # __file__  -> the path of THIS Python file (main.py)
     # abspath   -> make sure it's an absolute path
