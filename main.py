@@ -5,7 +5,6 @@ import os
 
 
 def main():
-    print("test test test")
     # === Figure out where this script lives (for stable DB path) ===========
     # __file__  -> the path of THIS Python file (main.py)
     # abspath   -> make sure it's an absolute path
@@ -38,7 +37,10 @@ def main():
     # === Tkinter window setup ==============================================
     root = tk.Tk()
     root.title("To Do List")
-    root.geometry("400x300")  # make the window more "notebook" style
+    root.geometry("600x400")  # make the window more "notebook" style
+
+    style = ttk.Style()
+    style.configure("TCheckbutton", font=("Helvetica", 16))
 
     # === Main frame (inside root) ==========================================
     mainframe = ttk.Frame(root, padding=15)
@@ -64,7 +66,7 @@ def main():
     # === Entry for new task ================================================
     new_task_var = tk.StringVar()
     entry = ttk.Entry(mainframe, textvariable=new_task_var)
-    entry.grid(row=1, column=0, sticky="ew", padx=(0, 5))
+    entry.grid(row=1, column=0, sticky="ew", padx=(5, 5))
 
     # === Helper: update 'completed' in DB when checkbox toggles ============
     def update_completed(task_id, is_completed):
